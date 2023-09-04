@@ -1,7 +1,7 @@
 # BlueDM protocol 仕様書 ver1.0.1 2023/09/04
 ## 概要
-1.BlueDMプロトコルは**ATProtocolの拡張**として定義される**E2EE**を実現するプロトコルである
-2.BlueDMプロトコルはクライアントのみで実装される
+- BlueDMプロトコルは**ATProtocolの拡張**として定義される**E2EE**を実現するプロトコルである
+- BlueDMプロトコルはクライアントのみで実装される
 ## ライセンス
 - 本ドキュメントは CC-BY-SA とします
 - 原本の著作者は "Hirofumi Ukawa <hirofumi@ukawa.biz>" です
@@ -40,16 +40,16 @@
     - 必須 公開鍵PEMファイルをBase64でエンコードしたテキスト
         - app.bsky.actor.profile.record.properties.bluedmPublicKey
             - .PublicKeyVersion
-                - 公開鍵のRFCバージョンをNumericで示す
+                - 利用できる公開鍵のRFCバージョンをNumericの配列で示す、自身が利用する公開鍵のバージョンは0番目に入れる
                     - 今バージョンのデフォルトは、8017 とする
             - .CommonKeyVersion
-                - 共通鍵のRFCバージョンをNumericで示す
+                - 利用できる共通鍵のRFCバージョンをNumericで配列で示す、自身が利用する共通鍵のバージョンは0番目に入れる
                     - 今バージョンのデフォルトは、3826 とする
             - .PublicKeyLength
-                - 公開鍵のキー長を記載する
+                - 公開鍵のキー長を配列でしめす。並びは、PublicKeyVersionと同一とする
                     - 今バージョンのデフォルトは、2048 とする
             - .CommonKeyLength
-                - 共通鍵のキー長を記載する
+                - 共通鍵のキー長を配列で記載する（利用する共通鍵のキー長の最大値）並びはCommonKeyVersionと同一とする。
                     - 今バージョンのデフォルトは、256 とする
             - .PublicKey
                 - 公開鍵ファイルをBase64でエンコードした物とする
