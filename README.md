@@ -1,4 +1,4 @@
-# BlueDM Protocol Specification ver1.0.1 2023/09/04
+# BlueDM Protocol Specification ver1 2023/09/04
 
 ## Overview
 - The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **ATProtocol**.
@@ -101,7 +101,8 @@
 1. Polling interval for Notification retrieval is implementation-dependent.
 
 
-# BlueDM protocol 仕様書 ver1.0.1 2023/09/04
+# BlueDM protocol 仕様書 ver1
+2023/09/04
 ## 概要
 - BlueDMプロトコルは**ATProtocolの拡張**として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
