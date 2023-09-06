@@ -1,14 +1,10 @@
 # BlueDM Protocol Specification ver.1 2023/09/04
 
+## Author
+- Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social
 ## Overview
 - The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **ATProtocol**.
 - The BlueDM protocol is implemented only on the client side.
-
-## License
-- This document is licensed under CC-BY-SA.
-- The original author is "Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social".
-
----
 
 ## Matters Not Addressed in This Document
 1. Matters related to the client's user interface.
@@ -106,9 +102,8 @@
 ## 概要
 - BlueDMプロトコルは**ATProtocolの拡張**として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
-## ライセンス
-- 本ドキュメントは CC-BY-SA とします
-- 原本の著作者は "Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social" です
+## 著者
+- Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social
 
 ***
 ## 本ドキュメントで言及しない事
