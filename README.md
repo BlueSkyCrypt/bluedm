@@ -9,7 +9,7 @@
 
 # Reference Implementation
 - It's developed in TypeScript and designed to run on the next.js framework.
-      - Dive in at [/reference_impl/next.js/].
+      - Dive in at [next.js reference imprementation.](/reference_impl/next.js)
       - Cautionary Note: It's imperative to recognize that the provided reference implementation is not exhaustive.
 
 # Licensing Details
