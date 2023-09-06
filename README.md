@@ -9,7 +9,7 @@
 
 # Reference Implementation
 - It's developed in TypeScript and designed to run on the next.js framework.
-      - Dive in at [next.js reference imprementation.](/reference_impl/next.js)
+      - Dive in at **[next.js reference imprementation.](/reference_impl/next.js)**
       - Cautionary Note: It's imperative to recognize that the provided reference implementation is not exhaustive.
 
 # Licensing Details
@@ -27,7 +27,7 @@
 
 # 参照実装について
 - next.jsで動作するTypeScriptコード
-      - [next.js reference imprementation.](/reference_impl/next.js)
+      - サブディレクトリ **[next.js reference imprementation.](/reference_impl/next.js)**　にあります
       - 注意：参照実装は完全では無い事を考慮する事
 # ライセンスについて
 - 本プロジェクトはMIT Licenseで提供される
