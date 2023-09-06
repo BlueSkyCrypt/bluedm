@@ -27,7 +27,7 @@
 
 # 参照実装について
 - next.jsで動作するTypeScriptコード
-      - [reference_impl/next.js/]
+      - [next.js reference imprementation.](/reference_impl/next.js)
       - 注意：参照実装は完全では無い事を考慮する事
 # ライセンスについて
 - 本プロジェクトはMIT Licenseで提供される
