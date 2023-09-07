@@ -1,7 +1,8 @@
 # BlueDM Protocol Specification ver 1.0 2023/09/07
 
 ## Author
-- Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social
+- Hirofumi Ukawa <hirofumi@ukawa.biz>
+- So Asano <so.asano@gmail.com>
   
 ## Overview
 - The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **ATProtocol**.
