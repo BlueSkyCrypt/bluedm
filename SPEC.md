@@ -5,7 +5,7 @@
 - So Asano <so.asano@gmail.com>
   
 ## Overview
-- The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **ATProtocol**.
+- The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **[ATProtocol] (https://atproto.com/docs)**.
 - The BlueDM protocol is implemented only on the client side.
 
 ## Matters Not Addressed in This Document
@@ -17,8 +17,8 @@
 2. Matters related to defects in implementation or legal responsibilities.
 
 ## 1. Main Technologies and Their Purposes
-1. XRPC Protocol
-    - An extension to the ATProtocol.
+1. ATProtocol
+    - [ATProtocol] (https://atproto.com/docs)
 2. Public Key Encryption
     - Mutual exchange of symmetric encryption keys.
     - Signing other fields.
@@ -50,11 +50,11 @@
         - app.bsky.feed.post.record.properties.bluedmSharedKey
         - Use Base64 Text. Include in the **Required: First Mention Post** from sender to recipient only.
         - Ensure Base64 padding on the sender side.
-    3. Encrypt the sender-generated shared key with the sender's public key and encode in Base64.
-        - app.bsky.feed.post.record.properties.bluedmSrcSharedKey
-        - Use Base64 Text. Include in the **Required: First Mention Post** from sender to recipient only.
-        - Usage: **Used by the sender to later view DM history**.
-        - Ensure Base64 padding on the sender side.
+    3. ~~Encrypt the sender-generated shared key with the sender's public key and encode in Base64.~~
+        - ~~app.bsky.feed.post.record.properties.bluedmSrcSharedKey~~
+        - ~~Use Base64 Text. Include in the **Required: First Mention Post** from sender to recipient only.~~
+        - ~~Usage: **Used by the sender to later view DM history**.~~
+        - ~~Ensure Base64 padding on the sender side.~~
     4. Encrypt messages both parties want to send using the shared key and encode in Base64.
         - app.bsky.feed.post.record.properties.bluedmSecretMessage
         - Encode the Post content in Base64 and provide as Text.
@@ -76,11 +76,11 @@
         - Obtain the recipient's Profile and verify bluedmVersion and bluedmPublicKey.
         - Verification method is implementation-dependent.
         - Behavior for recipients who can't receive the message is implementation-dependent.
-    1. The sender generates the **shared key using random numbers** and performs the following two encryptions:
+    1. The sender generates the **shared key using random numbers** and performs the following ~~two~~ encryptions:
         - Encrypt with the recipient's public key.
-        - Encrypt with the sender's public key.
+        - ~~Encrypt with the sender's public key.~~
     1. The recipient decrypts the received shared key using the recipient's private key for future use.
-    1. The sender decrypts the sent shared key using the sender's private key for future use.
+    1. ~~The sender decrypts the sent shared key using the sender's private key for future use.~~
 1. Subsequent DM Sending
     1. To prevent the DM from appearing on the timeline, subtract 100 years from the createdAt timestamp when sending.
     1. When displaying the recipient's message, add 100 years to the displayed timestamp.
@@ -98,16 +98,16 @@
     3. As the private key can calculate the public key, it's acceptable to recalculate and set the public key when importing the user's private key.
 1. Polling interval for Notification retrieval is implementation-dependent.
 
+## 5. Issue.
+- There is no defined way for the sender to restore the message afterwards. Implementation also.
+- Some suggestions are described with strikeout lines.
 
-# BlueDM protocol 仕様書 ver1.0
-2023/09/04
+# BlueDM protocol 仕様書 ver1.0 2023/09/07
+
 ## 概要
-- BlueDMプロトコルは**ATProtocolの拡張**として定義される**E2EE**を実現するプロトコルである
+- BlueDMプロトコルは**[ATProtocol] (https://atproto.com/docs)の拡張**として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
-## 著者
-- Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social
 
-***
 ## 本ドキュメントで言及しない事
 1. クライアントのユーザーインターフェースに関わる事
 2. 各国の法令に関わる事
@@ -117,8 +117,8 @@
 2. 実装の不具合や、法的な責任に関する事
 
 ## 1. 利用する主な技術とその目的
-1. XRPCプロトコル
-    - ATProtocolに対してのExtentionである
+1. ATProtocol
+    - [ATProtocol] (https://atproto.com/docs)
 1. 公開鍵暗号
     - 共通鍵暗号の相互交換
     - 他のフィールドへの署名
@@ -150,11 +150,11 @@
         - app.bsky.feed.post.record.properties.bluedmSharedKey
         - Base64のTextで記述する。本キーは送信元から送信先への**必須：最初のMentionのPost**にのみ入れる
         - Base64のパディングは送信側で保証する
-    1. 送信元で生成した共通鍵を送信元の公開鍵で暗号化しBase64エンコードしたテキスト
-        - app.bsky.feed.post.record.properties.bluedmSrcSharedKey
-        - Base64のTextで記述する。本キーは送信元から送信先への**必須：最初のMentionのPost**にのみ入れる
-        - 利用方法： **送信元が後からDM履歴を閲覧する為に利用する**
-        - Base64のパディングは送信側で保証する
+    1. ~~送信元で生成した共通鍵を送信元の公開鍵で暗号化しBase64エンコードしたテキスト~~
+        - ~~app.bsky.feed.post.record.properties.bluedmSrcSharedKey~~
+        - ~~Base64のTextで記述する。本キーは送信元から送信先への**必須：最初のMentionのPost**にのみ入れる~~
+        - ~~利用方法： 送信元が後からDM履歴を閲覧する為に利用する~~
+        - ~~Base64のパディングは送信側で保証する~~
     1. 双方が送りたいメッセージを共通鍵で暗号化しBase64エンコードしたテキスト
         - app.bsky.feed.post.record.properties.bluedmSecretMessage
         - Post内容をBase64でエンコードした内容を、Textで記述する。
@@ -175,11 +175,11 @@
         - 送信先のProfileを取得し、bluedmVersionとbluedmPublicKeyを確認する
         - 確認方法は実装依存とする
         - 送信できない相手の場合の動作は実装依存とする
-    1. 送信側は**共有鍵を乱数により生成**し下記2つの暗号化を行う
+    1. 送信側は**共有鍵を乱数により生成**し下記~~2つ~~の暗号化を行う
         - 送信先の公開鍵により暗号化
-        - 送信元の公開鍵により暗号化
-    1. 受信側は受けた共通鍵を受信側の秘密鍵で復号化し以降、もしくは後で利用する
-    1. 送信側は送信した共通鍵を送信側の秘密鍵で複合化し以降、もしくは後で利用する
+        - ~~送信元の公開鍵により暗号化~~
+    1. 受信側は受けた共通鍵を受信側の秘密鍵で復号化し利用する
+    1. ~~送信側は送信した共通鍵を送信側の秘密鍵で複合化し以降、もしくは後で利用する~~
 1. 以降のDM送信時
     1. DMがタイムラインに浮上しないよう送信時のcreatedAtを送信日時から100年減算した値とする
     1. 相手のメッセージを表示する時、表示上は100年加算した値とする
@@ -194,6 +194,9 @@
     1. 秘密鍵のインポートができる事が望まれる
     2. 秘密鍵が無い場合に、公開鍵と秘密鍵を再生成できる事が望まれる
         1. 再生成の結果、過去の送受信のデータは閲覧不能になるがこれを許容する
-    3. 秘密鍵があれば公開鍵を計算できる為、ユーザーの秘密鍵のインポート時に公開鍵の再計算、設定をしても良い
 1. Notification取得のポーリング間隔は実装に依存する
-   
+
+## 5. 課題
+- 送信元が後からメッセージを復元する方法が定義されていない。実装もに。
+- 取り消し線で一部提案を記載している
+  
