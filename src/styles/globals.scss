@@ -1,0 +1,86 @@
+$primary: #2f6ef6;
+
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/bulma.sass";
+
+.scrollable {
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 4px solid lightgray;
+  border-radius: 50%;
+  border-top: 4px solid gray;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+.message-body {
+  height: 100px;
+}
+
+.break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.notification-link {
+  cursor: pointer;
+}
+
+.bubble {
+  --r: 25px; /* Bubble radius */
+  --t: 30px; /* Tail size */
+  
+  padding: calc(2 * var(--r) / 3);
+  background-color: transparent; /* Ensure that the bubble background is transparent */
+
+  /* Masking to shape the bubble */
+  mask: 
+    /* Tail shape */
+    radial-gradient(var(--t) at var(--_d) 0, transparent 98%, black 102%) var(--_d) 100% / calc(100% - var(--r)) var(--t) no-repeat,
+    
+    /* Circular portion top-left of the bubble */
+    conic-gradient(at var(--r) var(--r), black 75%, transparent 0) calc(var(--r) / -2) calc(var(--r) / -2) padding-box,
+    
+    /* Main circular shape of the bubble */
+    radial-gradient(50% 50%, black 98%, transparent 101%) 0 0 / var(--r) var(--r) space padding-box;
+}
+
+.bubble-left {
+  --_d: 0%;
+  border-left: var(--t) solid #0000;
+  margin-right: var(--t);
+  place-self: start;
+  background-color: findLightColor($grey);
+}
+
+.bubble-right {
+  --_d: 100%;
+  border-right: var(--t) solid #0000;
+  margin-left: var(--t);
+  place-self: end;
+  background-color: findLightColor($primary);
+}
+
+.avatar {
+  background-color: grey;
+  border-radius: 6px;
+}
+
+.avatar img {
+  border-radius: 6px;
+}
