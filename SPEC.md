@@ -1,4 +1,4 @@
-# BlueDM Protocol Specification ver 1.0 2023/09/07
+# BlueDM Protocol Specification ver1 2023/09/07
 
 ## Author
 - Hirofumi Ukawa <hirofumi@ukawa.biz>
@@ -102,7 +102,7 @@
 - There is no defined way for the sender to restore the message afterwards. Implementation also.
 - Some suggestions are described with strikeout lines.
 
-# BlueDM protocol 仕様書 ver1.0 2023/09/07
+# BlueDM protocol 仕様書 ver1 2023/09/07
 
 ## 概要
 - BlueDMプロトコルは[ATProtocol](https://atproto.com/docs)の拡張として定義される**E2EE**を実現するプロトコルである
