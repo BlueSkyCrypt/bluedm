@@ -4,7 +4,7 @@
 
 # Detailed Overview for Developers
 - Objective of this Project:
-    - The **"Blue Disguised Message Protocol"** introduces an E2EE Direct Message functionality to the ATProtocol.
+    - The **"Blue Disguised Message Protocol"** introduces an E2EE Direct Message functionality to the [ATProtocol] (https://atproto.com/docs).
     - This project is delineated into two major components: the **specification** and **reference implementation**.
     - The primary thrust behind this initiative is to conduct a feasibility assessment.
 
