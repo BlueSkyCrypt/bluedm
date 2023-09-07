@@ -1,4 +1,4 @@
-# BlueDM Protocol Specification ver.1 2023/09/04
+# BlueDM Protocol Specification ver 1.0 2023/09/07
 
 ## Author
 - Hirofumi Ukawa <hirofumi@ukawa.biz> @ukawa.bsky.social
