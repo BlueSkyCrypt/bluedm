@@ -1,6 +1,6 @@
 # Auther
--Hirofumi Ukawa
--So Asano
+- Hirofumi Ukawa
+- So Asano
 
 # Detailed Overview for Developers
 - Objective of this Project:
