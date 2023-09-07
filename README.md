@@ -1,3 +1,7 @@
+# Auther
+-Hirofumi Ukawa
+-So Asano
+
 # Detailed Overview for Developers
 - Objective of this Project:
     - The **"Blue Disguised Message Protocol"** introduces an E2EE Direct Message functionality to the ATProtocol.
