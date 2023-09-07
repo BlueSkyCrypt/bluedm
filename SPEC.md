@@ -103,13 +103,13 @@
 
 # BlueDM protocol 仕様書 version 1.0 2023/09/07
 
+## 著者
+- Hirofumi Ukawa <hirofumi@ukawa.biz>
+
 ## 概要
 - BlueDMプロトコルは[ATProtocol](https://atproto.com/docs)の拡張として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
-
-## Author
-- Hirofumi Ukawa <hirofumi@ukawa.biz>
-
+- 
 ## 本ドキュメントで言及しない事
 1. クライアントのユーザーインターフェースに関わる事
 2. 各国の法令に関わる事
