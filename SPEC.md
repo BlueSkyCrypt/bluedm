@@ -105,7 +105,7 @@
 # BlueDM protocol 仕様書 ver1.0 2023/09/07
 
 ## 概要
-- BlueDMプロトコルは[ATProtocol](https://atproto.com/docs)の拡張**として定義される**E2EE**を実現するプロトコルである
+- BlueDMプロトコルは[ATProtocol](https://atproto.com/docs)の拡張として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
 
 ## 本ドキュメントで言及しない事
