@@ -1,11 +1,11 @@
-# Blue Disguised Message protocol
+# BlueDM protocol
 
 ## Overview
-- The **"Blue Disguised Message protocol"** introduces an E2EE Direct Message functionality to the [ATProtocol](https://atproto.com/docs)
+- The **"BlueDM protocol"** introduces an E2EE Direct Message functionality to the [ATProtocol](https://atproto.com/docs)
 - This project is delineated into two major components: the specification document and its reference implementation.
 - The primary thrust behind this initiative is to conduct a feasibility assessment.
 
-# Specification
+## Specification
 - Refer to [SPEC](/SPEC.md) for detailed technicalities.
 
 ## Reference Implementation
