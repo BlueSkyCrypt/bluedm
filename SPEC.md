@@ -5,7 +5,7 @@
 - So Asano <so.asano@gmail.com>
   
 ## Overview
-- The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **[ATProtocol] (https://atproto.com/docs)**.
+- The BlueDM protocol is a protocol designed to achieve **End-to-End Encryption (E2EE)** as an extension of the **[ATProtocol](https://atproto.com/docs)**.
 - The BlueDM protocol is implemented only on the client side.
 
 ## Matters Not Addressed in This Document
@@ -18,7 +18,7 @@
 
 ## 1. Main Technologies and Their Purposes
 1. ATProtocol
-    - [ATProtocol] (https://atproto.com/docs)
+    - [ATProtocol](https://atproto.com/docs)
 2. Public Key Encryption
     - Mutual exchange of symmetric encryption keys.
     - Signing other fields.
@@ -105,7 +105,7 @@
 # BlueDM protocol 仕様書 ver1.0 2023/09/07
 
 ## 概要
-- BlueDMプロトコルは**[ATProtocol] (https://atproto.com/docs)の拡張**として定義される**E2EE**を実現するプロトコルである
+- BlueDMプロトコルは**[ATProtocol](https://atproto.com/docs)の拡張**として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
 
 ## 本ドキュメントで言及しない事
@@ -118,7 +118,7 @@
 
 ## 1. 利用する主な技術とその目的
 1. ATProtocol
-    - [ATProtocol] (https://atproto.com/docs)
+    - [ATProtocol](https://atproto.com/docs)
 1. 公開鍵暗号
     - 共通鍵暗号の相互交換
     - 他のフィールドへの署名
