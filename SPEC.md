@@ -99,7 +99,7 @@
 1. Polling interval for Notification retrieval is implementation-dependent.
 
 
-# BlueDM protocol 仕様書 ver1
+# BlueDM protocol 仕様書 ver1.0
 2023/09/04
 ## 概要
 - BlueDMプロトコルは**ATProtocolの拡張**として定義される**E2EE**を実現するプロトコルである
