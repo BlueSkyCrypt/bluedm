@@ -1,8 +1,7 @@
 # Blue Disguised Message protocol
 
 ## Overview
-- The **"Blue Disguised Message protocol"** introduces an E2EE Direct Message functionality to the
-  - [ATProtocol Document](https://atproto.com/docs)
+- The **"Blue Disguised Message protocol"** introduces an E2EE Direct Message functionality to the [ATProtocol](https://atproto.com/docs)
 - This project is delineated into two major components: the specification document and its reference implementation.
 - The primary thrust behind this initiative is to conduct a feasibility assessment.
 
