@@ -1,4 +1,4 @@
-# BlueDM Protocol Specification ver1 2023/09/07
+# BlueDM Protocol Specification version 1.0 2023/09/07
 
 ## Author
 - Hirofumi Ukawa <hirofumi@ukawa.biz>
@@ -37,14 +37,14 @@
 1. [https://atproto.com/lexicons/app-bsky-actor#appbskyactorprofile](https://atproto.com/lexicons/app-bsky-actor#appbskyactorprofile)
     1. **Required**: Text indicating the BlueDM protocol version.
         - app.bsky.actor.profile.record.properties.bluedmVersion
-        - Use Numeric. If following this document, set to 1.
+        - Use Numeric. If following this document, set to 1.0
     2. **Required**: Include the public key PEM file as-is in JSON.
         - app.bsky.actor.profile.record.properties.bluedmPublicKey
             - Place the PEM public key file as-is. Use \r\n for line breaks.
 1. [https://atproto.com/lexicons/app-bsky-feed#appbskyfeedpost](https://atproto.com/lexicons/app-bsky-feed#appbskyfeedpost)
     1. **Required**: Text indicating the BlueDM protocol version.
         - app.bsky.feed.post.record.properties.bluedmVersion
-        - Use Numeric. If following this document, set to 1.
+        - Use Numeric. If following this document, set to 1.0
     2. Encrypt the sender-generated shared key with the recipient's public key and encode in Base64.
         - app.bsky.feed.post.record.properties.bluedmSharedKey
         - Use Base64 Text. Include in the **Required: First Mention Post** from sender to recipient only.
@@ -101,11 +101,14 @@
 - There is no defined way for the sender to restore the message afterwards. Implementation also.
 - Some suggestions are described with strikeout lines.
 
-# BlueDM protocol 仕様書 ver1 2023/09/07
+# BlueDM protocol 仕様書 version 1.0 2023/09/07
 
 ## 概要
 - BlueDMプロトコルは[ATProtocol](https://atproto.com/docs)の拡張として定義される**E2EE**を実現するプロトコルである
 - BlueDMプロトコルはクライアントのみで実装される
+
+## Author
+- Hirofumi Ukawa <hirofumi@ukawa.biz>
 
 ## 本ドキュメントで言及しない事
 1. クライアントのユーザーインターフェースに関わる事
@@ -137,14 +140,14 @@
 1. https://atproto.com/lexicons/app-bsky-actor#appbskyactorprofile
     1. **必須**:BlueDMのプロトコルバージョンのテキスト
         - app.bsky.actor.profile.record.properties.bluedmVersion
-        - Numericで記述する。本ドキュメントに従う場合、1 である
+        - Numericで記述する。本ドキュメントに従う場合、1.0 である
     1. **必須**:公開鍵PEMファイルをそのままJSONに記載する
         - app.bsky.actor.profile.record.properties.bluedmPublicKey
             - PEM公開鍵ファイルをそのまま入れる。改行は\r\nで表記する
 1. https://atproto.com/lexicons/app-bsky-feed#appbskyfeedpost
     1. **必須**:BlueDMのプロトコルバージョンのテキスト
         - app.bsky.feed.post.record.properties.bluedmVersion
-        - Numericで記述する。本ドキュメントに従う場合、1 である     
+        - Numericで記述する。本ドキュメントに従う場合、1.0 である     
     1. 送信元で生成した共通鍵を送信先の公開鍵で暗号化しBase64エンコードしたテキスト
         - app.bsky.feed.post.record.properties.bluedmSharedKey
         - Base64のTextで記述する。本キーは送信元から送信先への**必須：最初のMentionのPost**にのみ入れる
