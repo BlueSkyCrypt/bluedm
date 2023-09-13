@@ -465,7 +465,6 @@ const Home = () => {
           createdAt: dateStr,
           bluedmSharedKey: encryptedSharedKey,
           bluedmVersion: 1.0,
-          myPublicKey: myPublicKey,
         };
 
         const result = await agent.post(postObj);
